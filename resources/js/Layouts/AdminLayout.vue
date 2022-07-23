@@ -9,6 +9,7 @@ import JetDropdownLink from '@/Jetstream/DropdownLink.vue';
 import JetNavLink from '@/Jetstream/NavLink.vue';
 import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink.vue';
 import SideBar from '../Components/SideBar.vue';
+// import { Link } from "@inertiajs/inertia-vue3"
 
 defineProps({
     title: String,

@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('seasons', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('tmdb_id')->unique();
+            $table->foreignId('tv_s_id')->constrained();
+             $table->string('name');
+            $table->string('season_number');
+            $table->string('slug');
+            $table->string('poster_path');
             $table->timestamps();
         });
     }
