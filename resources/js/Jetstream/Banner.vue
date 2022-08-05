@@ -6,9 +6,11 @@ const show = ref(true);
 const style = computed(() => usePage().props.value.jetstream.flash?.bannerStyle || 'success');
 const message = computed(() => usePage().props.value.jetstream.flash?.banner || '');
 
+const resetBanner = methods(()=> usePage().props.value.jetstream.flash?.banner = "");
 watch(message, async () => {
   show.value = true;
 });
+
 </script>
 
 <template>
@@ -62,7 +64,7 @@ watch(message, async () => {
                             class="-mr-1 flex p-2 rounded-md focus:outline-none sm:-mr-2 transition"
                             :class="{ 'hover:bg-indigo-600 focus:bg-indigo-600': style == 'success', 'hover:bg-red-600 focus:bg-red-600': style == 'danger' }"
                             aria-label="Dismiss"
-                            @click.prevent="show = false"
+                            @click.prevent="resetBanner"
                         >
                             <svg
                                 class="h-5 w-5 text-white"

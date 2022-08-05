@@ -13,7 +13,10 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
-
+    'tmdb' => [
+        'secret' => env('TMDB_SECRET', '79408227745511eecd5b5826ab2fdaa8'),
+        'endpoint' => env('TMDB_ENDPOINT','https://api.themoviedb.org/3/')
+    ],
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
